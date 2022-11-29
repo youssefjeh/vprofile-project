@@ -6,7 +6,7 @@ pipeline {
         maven "Maven"
     }
 	
-    environment {
+  /*  environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "172.31.40.209:8081"
@@ -14,7 +14,7 @@ pipeline {
 	NEXUS_REPO_ID    = "vprofile-release"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
-    }
+    } */
 	
     stages{
         
@@ -77,7 +77,7 @@ pipeline {
           }
         }
 
-        stage("Publish to Nexus Repository Manager") {
+      /*  stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
@@ -112,7 +112,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
 
     }
